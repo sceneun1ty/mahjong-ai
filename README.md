@@ -1,8 +1,10 @@
 # 🀄 Mahjong AI — 川麻 AI 出牌助手
 
 > **拍照发牌，秒出建议，防放炮听最宽。**
+>
+> **Snap a photo of your hand. Get instant discard advice. Stay safe, maximize waits.**
 
-AI-powered Sichuan Mahjong (川麻/血战到底) assistant. Send a photo of your hand, get optimal discard recommendations instantly.
+AI-powered Sichuan Mahjong (川麻 / 血战到底 / Bloody End) assistant. Send a photo of your tiles, and get optimal discard recommendations in under a second — powered by computer vision and mahjong algorithms.
 
 **[OpenClaw](https://openclaw.ai) Skill** — The first mahjong AI on [ClawHub](https://clawhub.ai)
 
@@ -12,23 +14,23 @@ AI-powered Sichuan Mahjong (川麻/血战到底) assistant. Send a photo of your
 
 | Feature | Description |
 |---------|-------------|
-| 📸 **Tile Recognition** | AI vision identifies tiles from photos (筒/条/万) |
-| 🧮 **Shanten Calculation** | How many steps to tenpai (向听数) |
-| 🎯 **Tenpai Analysis** | What tiles you're waiting for + remaining count |
-| 💡 **Discard Recommendation** | Which tile to discard, ranked by effectiveness |
-| 🛡️ **Safety Scoring** | 🟢 Safe / 🟡 Caution / 🔴 Danger (防放炮) |
-| 🏆 **Special Hands** | Qingyise, Qidui, Longqidui, Duiduihu detection |
-| 🎲 **Dingque Advice** | Which suit to declare missing at game start |
-| 🔄 **Swap-3 Strategy** | Best 3 tiles to swap after dingque |
-| 🔍 **Opponent Prediction** | Predict opponent's strategy from their discards |
+| 📸 **Tile Recognition** | AI vision identifies tiles from photos — dots (筒), bamboo (条), characters (万) |
+| 🧮 **Shanten Calculation** | How many tiles away from ready/tenpai (向听数) |
+| 🎯 **Tenpai Analysis** | Which tiles you're waiting for + how many remain in the wall |
+| 💡 **Discard Recommendation** | Which tile to discard, ranked by wait width and efficiency |
+| 🛡️ **Safety Scoring** | 🟢 Safe / 🟡 Caution / 🔴 Danger — avoid dealing into others (防放炮) |
+| 🏆 **Special Hands** | Detects flush (清一色), seven pairs (七对), dragon seven (龙七对), all triplets (对对胡) |
+| 🎲 **Dingque Advice** | Which suit to declare missing at the start of each round |
+| 🔄 **Swap-3 Strategy** | Best 3 tiles to swap after declaring your missing suit |
+| 🔍 **Opponent Prediction** | Predict what opponents are building from their discards |
 
-## 🎮 Sichuan Mahjong Rules (川麻)
+## 🎮 Sichuan Mahjong Rules (川麻 / Xuezhan Daodi)
 
-- **Tiles**: Only 筒 (dots), 条 (bamboo), 万 (characters) — 108 tiles total
-- **Hand**: 13 tiles per player
-- **No Chi (吃)**: Only Pon (碰), Kan (杠), Win (胡)
-- **Blood War (血战到底)**: Game continues after someone wins
-- **Special Hands**: 清一色 (flush), 七对 (7 pairs), 龙七对, 对对胡
+- **Tiles**: Only 筒 (dots), 条 (bamboo), 万 (characters) — 108 tiles total, no winds or dragons
+- **Hand**: 13 tiles per player (draw to 14, then discard)
+- **No Chi (吃)**: Only Pon (碰/pong), Kan (杠/kong), Win (胡/hu)
+- **Blood War (血战到底)**: Play continues after someone wins — last player standing loses biggest
+- **Special Hands**: 清一色 flush, 七对 seven pairs, 龙七对 dragon seven, 对对胡 all triplets
 
 ## 📦 Installation
 
@@ -112,23 +114,27 @@ mahjong-ai/
 
 ## 🛣️ Roadmap
 
+### ✅ Completed
 - [x] Core analysis engine
 - [x] Dingque advice
 - [x] Swap-3 strategy  
 - [x] Opponent prediction
-- [ ] Guobiao (国标) mahjong rules
-- [ ] Guangdong mahjong rules
-- [ ] Hong Kong mahjong rules
-- [ ] ClawHub official release (March 21)
+- [x] ClawHub official release 🎉
+
+### 🌏 Other Mahjong Variants — Coming Soon
+- [ ] 🇯🇵 Riichi Mahjong (日麻/リーチ麻雀) — Japanese rules with riichi, dora, yaku scoring
+- [ ] 🇭🇰 Hong Kong Mahjong (港麻/香港麻雀) — Cantonese rules with winds, dragons, flowers
+- [ ] 🇨🇳 Guobiao Mahjong (国标麻将) — Chinese national competition standard (MCR)
+- [ ] 🇨🇳 Guangdong Mahjong (广东麻将) — Cantonese variant with chicken hand rules
 
 ## 🤝 How It Works with OpenClaw
 
-1. 📸 Take a photo of your hand → send to your OpenClaw assistant
-2. 👁️ AI vision recognizes each tile
-3. 🧠 Algorithm analyzes optimal play
-4. ⚡ Get recommendation in <1 second
+1. 📸 **Snap** — Take a photo of your mahjong hand and send it to your OpenClaw assistant
+2. 👁️ **Recognize** — AI vision identifies every tile in your hand
+3. 🧠 **Analyze** — The algorithm calculates shanten, waits, and optimal discards
+4. ⚡ **Advise** — Get a ranked recommendation in under 1 second
 
-Works with any OpenClaw-connected messaging platform (WhatsApp, Telegram, Discord, etc.)
+Works on any OpenClaw-connected platform: WhatsApp, Telegram, Discord, and more.
 
 ## 📄 License
 
@@ -142,4 +148,4 @@ Built with 🦞 [OpenClaw](https://openclaw.ai) + Claude Opus 4
 
 ---
 
-_🀄 The first Sichuan Mahjong AI on ClawHub. 拍照发牌，秒出建议。_
+_🀄 The first Sichuan Mahjong AI on ClawHub. Snap, analyze, win. 拍照发牌，秒出建议。_

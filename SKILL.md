@@ -1,6 +1,13 @@
 ---
 name: mahjong-ai
-description: AI 麻将助手 — 拍照识别手牌，分析最优出牌。川麻规则（血战到底/血流成河），只有筒条万，每人13张。用法：发一张手牌照片，AI 识别牌面并给出出牌建议、听牌分析、向听数计算。Use when: user sends a mahjong hand photo, asks for mahjong strategy, tile analysis, or which tile to discard.
+description: >
+  AI Mahjong Assistant — Sichuan Mahjong (川麻) tile recognition and strategy advisor.
+  Send a photo of your mahjong hand, get instant discard recommendations, tenpai/shanten analysis,
+  safety scoring, and special hand detection. Supports Sichuan rules (血战到底 Bloody End / Xuezhan Daodi).
+  Keywords: mahjong, 麻将, 川麻, tiles, discard, tenpai, shanten, tile recognition, mahjong AI,
+  strategy, hand analysis, photo recognition, dots, bamboo, characters, 筒, 条, 万.
+  Use when: user sends a mahjong hand photo, asks for mahjong strategy, tile analysis,
+  discard advice, shanten calculation, or tenpai analysis.
 ---
 
 # 麻将 AI 助手 🀄
@@ -54,3 +61,14 @@ python3 scripts/mahjong_analyze.py \
 
 ## 参考
 - 详细牌理：见 `references/mahjong_theory.md`
+
+## 🌏 Other Mahjong Variants — Coming Soon
+
+Currently supports **Sichuan Mahjong** (川麻). Future versions will add:
+
+- 🇯🇵 **Riichi Mahjong** (日麻) — Japanese competitive mahjong with riichi, dora, and yaku
+- 🇭🇰 **Hong Kong Mahjong** (港麻) — Cantonese rules with winds, dragons, and flowers
+- 🇨🇳 **Guobiao / MCR** (国标麻将) — Chinese national competition standard
+- 🇨🇳 **Guangdong Mahjong** (广东麻将) — Cantonese variant
+
+Want a specific variant? Open an issue on [GitHub](https://github.com/sceneun1ty/mahjong-ai)!
